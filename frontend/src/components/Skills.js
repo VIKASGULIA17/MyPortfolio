@@ -13,11 +13,11 @@ const Skills = () => {
             
             // Animate progress bars
             const progressBars = entry.target.querySelectorAll('.progress-bar');
-            progressBars.forEach((bar) => {
-              const level = bar.dataset.level;
+            progressBars.forEach((bar, index) => {
+              const level = bar.getAttribute('data-level');
               setTimeout(() => {
                 bar.style.width = `${level}%`;
-              }, 500);
+              }, 300 + (index * 100)); // Stagger the animations
             });
           }
         });
@@ -25,7 +25,9 @@ const Skills = () => {
       { threshold: 0.1 }
     );
 
-    if (skillsRef.current) observer.observe(skillsRef.current);
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
 
     return () => observer.disconnect();
   }, []);
