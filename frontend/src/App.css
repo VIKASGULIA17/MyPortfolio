@@ -31,6 +31,60 @@
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  50% {
+    transform: translateY(-5px) translateX(-5px);
+  }
+  75% {
+    transform: translateY(-15px) translateX(10px);
+  }
+}
+
+@keyframes floatingOrb {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
+}
+
+@keyframes drawLine {
+  0% {
+    stroke-dasharray: 0 1000;
+  }
+  100% {
+    stroke-dasharray: 1000 0;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -42,6 +96,39 @@
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
+}
+
+.floating-orb {
+  animation: floatingOrb 20s ease-in-out infinite;
+}
+
+.floating-orb-delayed {
+  animation: floatingOrb 25s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+.floating-orb-slow {
+  animation: floatingOrb 30s ease-in-out infinite;
+  animation-delay: 10s;
+}
+
+.animate-draw {
+  stroke-dasharray: 1000;
+  animation: drawLine 8s ease-in-out infinite;
+}
+
+.animate-draw-delayed {
+  stroke-dasharray: 1000;
+  animation: drawLine 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 4s ease-in-out infinite;
 }
 
 /* Animation delays */
@@ -59,6 +146,11 @@
 
 .animation-delay-500 {
   animation-delay: 0.5s;
+}
+
+/* Floating particles */
+[data-particle] {
+  animation: float 15s ease-in-out infinite;
 }
 
 /* Smooth scrolling */
@@ -186,7 +278,7 @@ html {
 
 /* Progress bar animation */
 .progress-bar {
-  transition: width 1s ease-in-out;
+  transition: width 1.5s ease-in-out;
 }
 
 /* Floating labels */
