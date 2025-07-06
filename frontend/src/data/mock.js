@@ -4,172 +4,224 @@ export const portfolioData = {
     name: "Vikas Gulia",
     title: "Data Scientist",
     tagline: "Turning data into stories and code into experiences.",
-    email: "vikas.gulia@example.com",
-    phone: "+91 9876543210",
+    email: "vikasgulia17@gmail.com",
+    phone: "+91 8527910496",
     location: "Delhi, India",
     github: "https://github.com/VIKASGULIA17",
     linkedin: "https://www.linkedin.com/in/vikas-gulia-b28255298",
     instagram: "https://www.instagram.com/orewa__vikas",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-    resume: "/resume.pdf"
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
   },
 
   about: {
     description: "I'm a passionate Data Scientist and Web Developer with expertise in turning complex data into actionable insights and building seamless digital experiences. Currently pursuing B.C.A. and constantly exploring the intersection of data science and web technologies.",
     highlights: [
-      "3+ years of experience in data science and web development",
+      "2+ years of experience in data science and web development",
       "Built 5+ production-ready applications",
       "Expertise in ML model deployment and web integration",
-      "Strong background in full-stack development"
+      "Strong background in Front-end development"
     ],
     stats: [
-      { label: "Projects Completed", value: "15+" },
-      { label: "Technologies Mastered", value: "20+" },
+      { label: "Projects Completed", value: "10+" },
+      { label: "Technologies Mastered", value: "15+" },
       { label: "Lines of Code", value: "50K+" },
       { label: "Coffee Cups", value: "∞" }
     ]
   },
 
   projects: [
-    {
-      id: 1,
-      title: "Ani-GPT",
-      description: "Conversational AI website leveraging the Gemini API for intelligent chat interactions with modern UI/UX design.",
-      tech: ["React", "Gemini API", "JavaScript", "CSS3"],
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop",
-      github: "https://github.com/VIKASGULIA17/ani-gpt",
-      live: "https://ani-gpt.vercel.app",
-      category: "AI/ML",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "NexVerse",
-      description: "Official website for IITM-Janakpuri's tech society with event management and member portal.",
-      tech: ["Next.js", "Tailwind CSS", "TypeScript", "Node.js"],
-      image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop",
-      github: "https://github.com/VIKASGULIA17/nexverse",
-      live: "https://nexverse.tech",
-      category: "Web Development",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Personal Development Tracker",
-      description: "Comprehensive platform for tracking holistic growth across skills, health, and finance with data visualization.",
-      tech: ["React", "Supabase", "Chart.js", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      github: "https://github.com/VIKASGULIA17/dev-tracker",
-      live: "https://dev-tracker.vercel.app",
-      category: "Full Stack",
-      featured: true
-    },
-    {
-      id: 4,
-      title: "Movie Recommendation System",
-      description: "Content-based movie recommendation system with interactive Streamlit dashboard and advanced filtering.",
-      tech: ["Python", "Streamlit", "pandas", "scikit-learn"],
-      image: "https://images.unsplash.com/photo-1489599511770-4bd69c7ea2a7?w=600&h=400&fit=crop",
-      github: "https://github.com/VIKASGULIA17/movie-recommender",
-      live: "https://movie-rec-vg.streamlit.app",
-      category: "Data Science",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Student Marks Performance Prediction",
-      description: "ML model with Streamlit dashboard to predict student performance based on various factors.",
-      tech: ["Python", "scikit-learn", "Streamlit", "pandas"],
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop",
-      github: "https://github.com/VIKASGULIA17/student-prediction",
-      live: "https://student-pred-vg.streamlit.app",
-      category: "Data Science",
-      featured: false
-    }
-  ],
+  {
+    id: 1,
+    title: "Ani-gpt",
+    description:
+      "Developed a responsive AI assistant platform featuring an intuitive and conversational interface. Offers intelligent responses using Gemini API while ensuring seamless UX across devices.",
+    tech: ["React", "Javascript", "Tailwind CSS", "Framer Motion", "Shadcn", "Supabase"],
+    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop",
+    github: "https://github.com/VIKASGULIA17/Gemini-Clone",
+    live: "https://ani-gpt.netlify.app/",
+    category: "AI/ML",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Nerverse",
+    description:
+      "Engineered the official website for IITM Janakpuri's tech society, NexVerse. Highlights events, announcements, member profiles, and collaborations via an interactive and modern UI.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+    image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop",
+    github: "https://github.com/tejveer755/Nexverse",
+    live: "https://nexverse-lake.vercel.app/",
+    category: "Web Development",
+    featured: true
+  },
+  {
+    id: 3,
+    title: "Portfolio Website",
+    description:
+      "Crafted a sleek, professional portfolio website to showcase projects, skills, and experiences. Features animated transitions, responsive design, and clean visual hierarchy.",
+    tech: ["React.js", "Tailwind CSS", "Framer Motion", "Shadcn"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    github: "https://github.com/VIKASGULIA17/PortFolio",
+    live: "https://vikasguliaportfolio.netlify.app/",
+    category: "Full Stack",
+    featured: true
+  },
+  {
+    id: 4,
+    title: "Personal Development Tracker",
+    description:
+      "A self-growth dashboard to monitor personal progress in areas like skills, health, finances, and mood. Offers time tracking, AI-based suggestions, and dynamic visualizations.",
+    tech: ["Next.js", "Tailwind CSS", "Supabase", "Shadcn"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    github: "https://github.com/VIKASGULIA17/Personal-development-tracker",
+    live: "https://personal-development-tracker.netlify.app/",
+    category: "Full Stack",
+    featured: true
+  },
+  {
+    id: 5,
+    title: "Movie Recommendation System",
+    description:
+      "Built a content-based movie recommender with a Streamlit dashboard. Enables users to filter and explore personalized suggestions using ML techniques.",
+    tech: ["Python", "Streamlit", "pandas", "scikit-learn"],
+    image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    github: "https://github.com/VIKASGULIA17/movie-recommender",
+    live: "https://movie-rec-vg.streamlit.app",
+    category: "Data Science",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "Student Marks Performance Prediction",
+    description:
+      "Designed an ML model to predict student performance based on input factors. Deployed with Streamlit for user-friendly interaction and visualization.",
+    tech: ["Python", "scikit-learn", "Streamlit", "pandas"],
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop",
+    github: "https://github.com/VIKASGULIA17/student-prediction",
+    live: "https://student-pred-vg.streamlit.app",
+    category: "Data Science",
+    featured: false
+  }
+]
+,
 
   skills: {
     languages: [
       { name: "Python", level: 95, icon: "🐍" },
-      { name: "JavaScript", level: 90, icon: "🟨" },
-      { name: "TypeScript", level: 85, icon: "🔷" },
-      { name: "C++", level: 80, icon: "⚡" },
+      { name: "JavaScript", level: 70, icon: "🟨" },
+      { name: "Php", level: 85, icon: "🔷" },
+      { name: "C++", level: 90, icon: "⚡" },
       { name: "HTML", level: 95, icon: "🌐" },
-      { name: "CSS/Sass", level: 90, icon: "🎨" }
+      { name: "CSS", level: 90, icon: "🎨" }
     ],
     frameworks: [
       { name: "React", level: 95, icon: "⚛️" },
-      { name: "Next.js", level: 90, icon: "▲" },
+      { name: "Next.js", level: 60, icon: "▲" },
       { name: "Tailwind CSS", level: 90, icon: "💨" },
       { name: "Streamlit", level: 85, icon: "🎯" }
     ],
     dataScience: [
       { name: "pandas", level: 90, icon: "🐼" },
-      { name: "scikit-learn", level: 85, icon: "🤖" },
-      { name: "TensorFlow", level: 80, icon: "🧠" },
-      { name: "Keras", level: 80, icon: "🔥" }
+      { name: "scikit-learn", level: 75, icon: "🤖" },
+      { name: "Matplotlib", level: 90, icon: "🧠" },
+      { name: "Numpy", level: 95, icon: "🔢" },
+      { name: "Seaborn", level: 90, icon: "📊" }
     ],
     tools: [
       { name: "Git/GitHub", level: 95, icon: "🔧" },
       { name: "Supabase", level: 85, icon: "⚡" },
       { name: "Power BI", level: 80, icon: "📊" },
       { name: "VS Code", level: 95, icon: "💻" },
-      { name: "Linux", level: 85, icon: "🐧" }
+      { name: "Linux", level: 85, icon: "🐧" },
+      { name: "Vercel", level: 75, icon: "📉" },
     ]
   },
 
   education: {
     degree: "Bachelor of Computer Applications",
     institution: "IITM Janakpuri",
-    year: "2022 - 2025",
+    year: "2023 - 2026",
     status: "3rd Year (Currently Pursuing)",
-    gpa: "8.5/10",
+    gpa: "9.5/10",
     coursework: [
       "Data Structures & Algorithms",
       "Database Management Systems",
       "Machine Learning",
       "Web Development",
       "Software Engineering",
-      "Computer Networks"
+      "Computer Networks",
+      "Data Science",
+      "Photo Shop",
+      "C/C++"
     ],
     achievements: [
       "Tech Society Core Member",
-      "Best Project Award 2023",
-      "Hackathon Winner",
-      "Academic Excellence Award"
+      "Code of Duty Winner(problem solving contest)",
+      "Leetcode 350+ Problem solved"
     ]
   },
 
   blogs: [
-    {
-      id: 1,
-      title: "Building Scalable React Applications with Modern Patterns",
-      excerpt: "Exploring advanced React patterns and state management techniques for large-scale applications.",
-      date: "2024-01-15",
-      readTime: "8 min read",
-      category: "React",
-      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop",
-      slug: "scalable-react-patterns"
-    },
-    {
-      id: 2,
-      title: "Machine Learning Pipeline Optimization for Production",
-      excerpt: "Best practices for deploying and maintaining ML models in production environments.",
-      date: "2024-01-10",
-      readTime: "12 min read",
-      category: "Machine Learning",
-      image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&h=400&fit=crop",
-      slug: "ml-pipeline-optimization"
-    },
-    {
-      id: 3,
-      title: "Data Visualization Techniques for Better Insights",
-      excerpt: "Creating compelling data stories through effective visualization strategies and tools.",
-      date: "2024-01-05",
-      readTime: "10 min read",
-      category: "Data Science",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      slug: "data-visualization-insights"
-    }
-  ]
+  {
+    id: 1,
+    title: "A Beginner’s Guide to Python Data Types",
+    excerpt: "Build a solid programming foundation by mastering Python’s core data types including integers, strings, and lists.",
+    date: "2025-01-11",
+    readTime: "6 min read",
+    category: "Python",
+    image: "https://images.unsplash.com/photo-1690683789978-3cf73960d650?q=80&w=1809&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    slug: "https://dev.to/vikas_gulia/exploring-python-data-types-a-beginners-guide-fe2"
+  },
+  {
+    id: 2,
+    title: "A Practical Guide to Web Scraping with Python",
+    excerpt: "Learn to extract useful data from websites using BeautifulSoup and Requests in this hands-on web scraping tutorial.",
+    date: "2025-06-22",
+    readTime: "9 min read",
+    category: "Webscraping",
+    image: "https://plus.unsplash.com/premium_photo-1661878265739-da90bc1af051?q=80&w=1086&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    slug: "https://dev.to/vikas_gulia/web-scraping-in-python-a-practical-guide-for-data-scientists-4012"
+  },
+  {
+    id: 3,
+    title: "Univariate Analysis in Data Science: From Beginner to Expert",
+    excerpt: "Explore techniques to analyze individual features using descriptive statistics and visualization tools in Python.",
+    date: "2025-06-24",
+    readTime: "10 min read",
+    category: "Data Cleaning",
+    image: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    slug: "https://dev.to/vikas_gulia/univariate-analysis-in-data-science-a-complete-beginner-to-pro-guide-5e81"
+  },
+  {
+    id: 4,
+    title: "Mastering Multivariate Analysis in Data Science",
+    excerpt: "Unlock complex relationships between multiple variables to gain deeper insights through multivariate analysis.",
+    date: "2025-06-25",
+    readTime: "11 min read",
+    category: "Machine Learning",
+    image: "https://plus.unsplash.com/premium_photo-1661270415926-37a9d24aff30?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    slug: "https://dev.to/vikas_gulia/mastering-multivariate-analysis-a-guide-for-data-science-enthusiasts-1gdk"
+  },
+  {
+    id: 5,
+    title: "Feature Scaling in ML: What, Why & How",
+    excerpt: "Enhance model performance with proper feature scaling using Python’s sklearn—normalize, standardize, and succeed.",
+    date: "2025-06-25",
+    readTime: "7 min read",
+    category: "EDA",
+    image: "https://plus.unsplash.com/premium_photo-1682124651258-410b25fa9dc0?q=80&w=1321&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    slug: "https://dev.to/vikas_gulia/feature-scaling-in-machine-learning-why-it-matters-and-how-to-do-it-45m5"
+  },
+  {
+    id: 6,
+    title: "Efficient Data Preprocessing with ColumnTransformer & Pipelines",
+    excerpt: "Streamline your preprocessing workflows with ColumnTransformer and Pipelines for scalable machine learning models.",
+    date: "2025-06-26",
+    readTime: "8 min read",
+    category: "Data Preprocessing",
+    image: "https://plus.unsplash.com/premium_photo-1661878265739-da90bc1af051?q=80&w=1086&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    slug: "https://dev.to/vikas_gulia/columntransformer-and-pipelines-in-scikit-learn-clean-scalable-and-powerful-preprocessing-3mff"
+  }
+]
+
 };

@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowDown, Download, Mail, MapPin } from 'lucide-react';
 import { portfolioData } from '../data/mock';
-
+import resume from "../assets/Resume_vikas.pdf"
+import img from "../assets/image.png"
 const Hero = () => {
   const heroRef = useRef(null);
 
@@ -89,7 +90,7 @@ const Hero = () => {
         </div>
         
         {/* Geometric Shapes */}
-        <div className="absolute top-20 right-20 w-16 h-16 border-2 border-purple-500 opacity-20 rotate-45 animate-spin-slow"></div>
+        <div className="absolute   top-20 right-20 w-16 h-16 border-2 border-purple-500 opacity-20 rotate-45 animate-spin-slow"></div>
         <div className="absolute bottom-20 left-20 w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 opacity-20 animate-bounce-slow"></div>
         <div className="absolute top-1/3 left-1/4 w-8 h-8 bg-blue-500 opacity-20 animate-pulse"></div>
       </div>
@@ -143,7 +144,7 @@ const Hero = () => {
               </button>
               
               <a
-                href={portfolioData.personal.resume}
+                href={resume}
                 download
                 className="px-8 py-3 border-2 border-purple-600 text-purple-600 dark:text-purple-400 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300 flex items-center space-x-2 group"
               >
@@ -158,7 +159,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-2xl transform hover:scale-105 transition-all duration-500">
                 <img
-                  src={portfolioData.personal.avatar}
+                  src={img}
                   alt={portfolioData.personal.name}
                   className="w-full h-full object-cover"
                 />

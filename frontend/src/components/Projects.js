@@ -75,7 +75,7 @@ const Projects = () => {
               className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                 filter === category
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
-                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 '
               }`}
             >
               <div className="flex items-center space-x-2">
@@ -158,7 +158,7 @@ const Projects = () => {
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900 dark:to-pink-900 text-purple-800 dark:text-purple-200 text-sm rounded-full font-medium"
+                      className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-slate-700 dark:to-zinc-700 text-purple-800 dark:text-purple-200 text-sm rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -199,7 +199,7 @@ const Projects = () => {
               href={portfolioData.personal.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-300"
+              className="underline hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-300 focus:outline-none"
             >
               Visit my GitHub
             </a>

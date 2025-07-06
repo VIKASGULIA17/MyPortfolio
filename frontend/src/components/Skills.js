@@ -4,33 +4,34 @@ import { portfolioData } from '../data/mock';
 const Skills = () => {
   const skillsRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-            
-            // Animate progress bars
-            const progressBars = entry.target.querySelectorAll('.progress-bar');
-            progressBars.forEach((bar, index) => {
-              const level = bar.getAttribute('data-level');
-              setTimeout(() => {
-                bar.style.width = `${level}%`;
-              }, 300 + (index * 100)); // Stagger the animations
-            });
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+ useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
 
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
-    }
+          // Animate progress bars
+          const progressBars = entry.target.querySelectorAll('.progress-bar');
+          progressBars.forEach((bar, index) => {
+            const level = bar.getAttribute('data-level');
+            setTimeout(() => {
+              bar.style.width = `${level}%`;
+            }, 300 + index * 100);
+          });
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-    return () => observer.disconnect();
-  }, []);
+  if (skillsRef.current) {
+    observer.observe(skillsRef.current);
+  }
+
+  return () => observer.disconnect();
+}, []);
+
 
   const SkillCategory = ({ title, skills, gradient, icon }) => (
     <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -66,10 +67,10 @@ const Skills = () => {
   );
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="skills"  ref={skillsRef} className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div ref={skillsRef} className="text-center mb-16 opacity-0 transform translate-y-8 transition-all duration-1000">
+        <div className="text-center mb-16 opacity-0 transform translate-y-8 transition-all duration-1000">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
             <h2 className="text-sm font-semibold text-purple-600 dark:text-purple-400 uppercase tracking-wide">

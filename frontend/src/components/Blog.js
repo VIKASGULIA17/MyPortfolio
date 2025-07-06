@@ -25,16 +25,20 @@ const Blog = () => {
   const getCategoryColor = (category) => {
     switch (category) {
       case 'React': return 'from-blue-500 to-cyan-500';
+      case 'Python': return 'from-purple-500 to-red-500';
+      case 'Webscraping': return 'from-indigo-500 to-blue-400';
+      case 'Data Cleaning': return 'from-cyan-700 to-rose-400';
+      case 'EDA': return 'from-orange-500 to-rose-500';
       case 'Machine Learning': return 'from-green-500 to-teal-500';
       case 'Data Science': return 'from-purple-500 to-pink-500';
-      default: return 'from-gray-500 to-gray-600';
+      default: return 'from-purple-500 to-red-500';
     }
   };
 
-  const handleReadMore = (slug) => {
-    // In a real app, this would navigate to the blog post
-    alert(`Navigating to blog post: ${slug}`);
-  };
+  const handleReadMore = (url) => {
+  window.location.href=url, "_blank";
+};
+
 
   return (
     <section id="blog" className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -89,7 +93,7 @@ const Blog = () => {
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <button
                     onClick={() => handleReadMore(post.slug)}
-                    className="px-6 py-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="px-6 py-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none"
                   >
                     Read Article
                   </button>
@@ -127,7 +131,7 @@ const Blog = () => {
                 {/* Read More Button */}
                 <button
                   onClick={() => handleReadMore(post.slug)}
-                  className="flex items-center space-x-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium transition-colors duration-300 group"
+                  className="flex items-center space-x-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium transition-colors duration-300 group focus:outline-none"
                 >
                   <span>Read More</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -137,8 +141,8 @@ const Blog = () => {
           ))}
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center">
+        {/* Newsletter Signup -will use when i'll create a newsletter */}
+        {/* <div className="mt-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center">
           <h4 className="text-2xl font-bold text-white mb-4">Stay Updated</h4>
           <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
             Subscribe to my newsletter for the latest articles on data science, web development, and tech insights.
@@ -150,19 +154,20 @@ const Blog = () => {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300 shadow-lg"
             />
-            <button className="px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl">
+            <button className="px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none">
               Subscribe
             </button>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
         {/* Call to Action */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-2 text-purple-600 dark:text-purple-400 font-medium">
             <span>Want to read more?</span>
             <button 
-              onClick={() => alert('Navigating to full blog...')}
-              className="underline hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-300"
+              onClick={() => window.location.href = "https://dev.to/vikas_gulia"}
+
+              className="underline hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-300 focus:outline-none"
             >
               Visit my blog
             </button>

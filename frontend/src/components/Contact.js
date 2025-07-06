@@ -2,60 +2,65 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, MessageCircle } from 'lucide-react';
 import { portfolioData } from '../data/mock';
 
+const TELEGRAM_API = 'https://api.telegram.org/bot7556029899:AAG3EogGPdL17WImWlbIT18R5eNU81U9IAA/sendMessage';
+const TELEGRAM_CHAT_ID = 6974520564;
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const contactRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('animate-fade-in-up');
+      });
+    }, { threshold: 0.1 });
 
     if (contactRef.current) observer.observe(contactRef.current);
-
     return () => observer.disconnect();
   }, []);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+    setSubmitStatus(null);
+
+    const { name, email, subject, message } = formData;
+
+    if (name.length < 2 || message.length < 10 || !email.includes('@')) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    const telegramMessage = `📬 New Contact Form Submission:\n👤 Name: ${name}\n📧 Email: ${email}\n📝 Subject: ${subject || 'N/A'}\n💬 Message: ${message}`;
+
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const response = await fetch(TELEGRAM_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: telegramMessage }),
+      });
+      const result = await response.json();
+
+      if (!response.ok) throw new Error(result.description);
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
+    } catch (err) {
+      console.error('Telegram Error:', err);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 5000);
     }
-
-    // Reset status after 5 seconds
-    setTimeout(() => setSubmitStatus(null), 5000);
   };
-
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
