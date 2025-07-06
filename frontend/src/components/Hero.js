@@ -6,6 +6,13 @@ const Hero = () => {
   const heroRef = useRef(null);
 
   useEffect(() => {
+    // Animate floating particles
+    const particles = document.querySelectorAll('[data-particle]');
+    particles.forEach((particle, index) => {
+      particle.style.animation = `float ${10 + Math.random() * 20}s infinite linear`;
+      particle.style.animationDelay = `${Math.random() * 10}s`;
+    });
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
