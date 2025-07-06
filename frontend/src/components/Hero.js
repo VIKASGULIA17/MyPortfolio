@@ -31,11 +31,60 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
-      {/* Background Effects */}
+      {/* Animated Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse animation-delay-4000"></div>
+        {/* Floating Particles */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-purple-500 rounded-full opacity-20"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 10}s`,
+                animationDuration: `${10 + Math.random() * 20}s`,
+              }}
+              data-particle={i}
+            ></div>
+          ))}
+        </div>
+        
+        {/* Moving Gradient Orbs */}
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse floating-orb"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse floating-orb-delayed"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse floating-orb-slow"></div>
+        
+        {/* Animated Lines */}
+        <div className="absolute inset-0">
+          <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style={{ stopColor: '#8b5cf6', stopOpacity: 0.1 }} />
+                <stop offset="100%" style={{ stopColor: '#ec4899', stopOpacity: 0.3 }} />
+              </linearGradient>
+            </defs>
+            <path
+              d="M0,200 Q400,100 800,200 T1600,200"
+              stroke="url(#lineGradient)"
+              strokeWidth="2"
+              fill="none"
+              className="animate-draw"
+            />
+            <path
+              d="M0,400 Q600,300 1200,400 T2400,400"
+              stroke="url(#lineGradient)"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-delayed"
+            />
+          </svg>
+        </div>
+        
+        {/* Geometric Shapes */}
+        <div className="absolute top-20 right-20 w-16 h-16 border-2 border-purple-500 opacity-20 rotate-45 animate-spin-slow"></div>
+        <div className="absolute bottom-20 left-20 w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 opacity-20 animate-bounce-slow"></div>
+        <div className="absolute top-1/3 left-1/4 w-8 h-8 bg-blue-500 opacity-20 animate-pulse"></div>
       </div>
 
       {/* Content */}
