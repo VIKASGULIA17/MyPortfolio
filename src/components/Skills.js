@@ -70,7 +70,7 @@ const Skills = () => {
     <section id="skills"  ref={skillsRef} className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 opacity-0 transform translate-y-8 transition-all duration-1000">
+        <div className="text-center mb-16 opacity-100 transform translate-y-8 transition-all duration-1000 ">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
             <h2 className="text-sm font-semibold text-purple-600 dark:text-purple-400 uppercase tracking-wide">
