@@ -85,8 +85,8 @@ export const portfolioData = {
       "Built a content-based movie recommender with a Streamlit dashboard. Enables users to filter and explore personalized suggestions using ML techniques.",
     tech: ["Python", "Streamlit", "pandas", "scikit-learn"],
     image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    github: "https://github.com/VIKASGULIA17/movie-recommender",
-    live: "https://movie-rec-vg.streamlit.app",
+    github: "https://github.com/VIKASGULIA17/Movie-recommendation-system",
+    live: "https://movie-recommendation-system-by-vikas.streamlit.app",
     category: "Data Science",
     featured: false
   },
@@ -97,8 +97,8 @@ export const portfolioData = {
       "Designed an ML model to predict student performance based on input factors. Deployed with Streamlit for user-friendly interaction and visualization.",
     tech: ["Python", "scikit-learn", "Streamlit", "pandas"],
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop",
-    github: "https://github.com/VIKASGULIA17/student-prediction",
-    live: "https://student-pred-vg.streamlit.app",
+    github: "https://github.com/VIKASGULIA17/Student_marks_predictor",
+    live: "https://studentmarkspredicter.streamlit.app/",
     category: "Data Science",
     featured: false
   }
@@ -221,7 +221,18 @@ export const portfolioData = {
     category: "Data Preprocessing",
     image: "https://plus.unsplash.com/premium_photo-1661878265739-da90bc1af051?q=80&w=1086&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     slug: "https://dev.to/vikas_gulia/columntransformer-and-pipelines-in-scikit-learn-clean-scalable-and-powerful-preprocessing-3mff"
-  }
+  },
+  {
+  id: 6,
+  title: "Mastering Linear Regression with Scikit-Learn",
+  excerpt: "Dive into the fundamentals of Linear Regression and build predictive models using Scikit-Learn.",
+  date: "2025-06-26",
+  readTime: "8 min read",
+  category: "Machine Learning",
+  image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+  slug: "https://dev.to/vikas_gulia/linear-regression-in-machine-learning-the-simplest-yet-most-powerful-start-44k8"
+}
+
 ]
 
 };
